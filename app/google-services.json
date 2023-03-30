@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "429175535850",
+    "project_id": "pruebapractica2-dd509",
+    "storage_bucket": "pruebapractica2-dd509.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429175535850:android:e749f4ab6249e9bbb43f93",
+        "android_client_info": {
+          "package_name": "com.example.desafiopractico2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "429175535850-sa4s6929vlieqk7bg32eamumkmnh4sav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU_MvkjFHCmy1L8HFPs1p7uIR7ZMGLhrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "429175535850-sa4s6929vlieqk7bg32eamumkmnh4sav.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
