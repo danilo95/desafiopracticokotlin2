@@ -5,6 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.desafiopractico2.Adapter.MyAdapter
+import com.example.desafiopractico2.Models.MedicamentosViewModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -16,6 +21,11 @@ private const val ARG_PARAM2 = "param2"
  * Use the [medicamentosFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+
+private lateinit var viewModel: MedicamentosViewModel
+private lateinit var ReciclerViewMedicamentosList: RecyclerView
+lateinit var adapter: MyAdapter
+
 class medicamentosFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -55,5 +65,18 @@ class medicamentosFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        ReciclerViewMedicamentosList = view.findViewById(R.id.ReciclerViewMedicamentosList)
+        ReciclerViewMedicamentosList.layoutManager = LinearLayoutManager(context)
+        ReciclerViewMedicamentosList.setHasFixedSize(true)
+        adapter = MyAdapter()
+        ReciclerViewMedicamentosList.adapter = adapter
+
+        viewModel = ViewModelProvider(this).get(MedicamentosViewModel::class.java)
+
+        viewModel.allMedicinas.observe(viewLifecycleOwner, { adapter.updateMedicamentosList((it)) })
     }
 }
