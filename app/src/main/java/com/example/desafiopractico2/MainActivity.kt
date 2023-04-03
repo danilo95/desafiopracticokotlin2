@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
+
     private lateinit var binding: ActivityMainBinding
     private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,5 +44,6 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, SiginActivity::class.java)
         startActivity(intent)
     }
+
 
 }

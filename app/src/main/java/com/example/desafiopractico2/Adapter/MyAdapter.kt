@@ -51,6 +51,8 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.myViewHolder>() {
 
 
         }
+
+
     }
 
     fun updateMedicamentosList(medicamentosList: List<Medicamentos>) {
@@ -66,4 +68,5 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.myViewHolder>() {
         val medicamentoConIndications: TextView =
             itemView.findViewById(R.id.medicamentoConIndications)
     }
+
 }
