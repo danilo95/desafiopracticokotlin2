@@ -1,13 +1,17 @@
 package com.example.desafiopractico2.Adapter
 
+import android.content.Intent
 import android.icu.text.DecimalFormat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafiopractico2.Models.Medicamentos
 import com.example.desafiopractico2.R
+import com.example.desafiopractico2.selectCompra
 
 class MyAdapter : RecyclerView.Adapter<MyAdapter.myViewHolder>() {
 
@@ -32,6 +36,21 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.myViewHolder>() {
         holder.medicamentoPrice.text = "$ "+ DecimalFormat("#.00").format(currentItem.precio)
         holder.medicamentoIndications.text = currentItem.indicaciones
         holder.medicamentoConIndications.text = currentItem.contraIndicaciones
+
+        val test: Button = holder.itemView.findViewById((R.id.buttonselect))
+
+        test.setOnClickListener { v: View ->
+
+            Toast.makeText(holder.itemView.context, "soy yo ${currentItem}", Toast.LENGTH_SHORT)
+                .show()
+            //colocar aca funcion para reemplazar fragment
+
+            val intent: Intent = Intent(v.context, selectCompra::class.java)
+
+            v.context.startActivity(intent)
+
+
+        }
     }
 
     fun updateMedicamentosList(medicamentosList: List<Medicamentos>) {
