@@ -37,15 +37,30 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.myViewHolder>() {
         holder.medicamentoIndications.text = currentItem.indicaciones
         holder.medicamentoConIndications.text = currentItem.contraIndicaciones
 
+
         val test: Button = holder.itemView.findViewById((R.id.buttonselect))
 
         test.setOnClickListener { v: View ->
 
             Toast.makeText(holder.itemView.context, "soy yo ${currentItem}", Toast.LENGTH_SHORT)
                 .show()
-            //colocar aca funcion para reemplazar fragment
+
 
             val intent: Intent = Intent(v.context, selectCompra::class.java)
+
+            v.context.startActivity(intent)
+
+
+        }
+        val compra: Button = holder.itemView.findViewById((R.id.buttoncompra))
+
+        test.setOnClickListener { v: View ->
+
+            Toast.makeText(holder.itemView.context, "soy yo ${currentItem}", Toast.LENGTH_SHORT)
+                .show()
+
+
+            val intent: Intent = Intent(v.context, compra::class.java)
 
             v.context.startActivity(intent)
 
