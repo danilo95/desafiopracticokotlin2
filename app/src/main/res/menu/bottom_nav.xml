@@ -4,14 +4,14 @@
     <item
         android:id="@+id/medicamentosMenuItem"
         android:icon="@drawable/baseline_home_24"
-        android:title="Medicamentos"
+        android:title="@string/medicamentos"
          />
     <item
         android:id="@+id/historialMenuItem"
         android:icon="@drawable/baseline_checklist_24"
-        android:title="Historial" />
+        android:title="@string/historial" />
     <item
         android:id="@+id/logoutMenuItem"
         android:icon="@drawable/baseline_logout_24"
-        android:title="Log out" />
+        android:title="@string/log_out" />
 </menu>

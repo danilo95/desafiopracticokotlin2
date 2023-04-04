@@ -15,32 +15,33 @@ class MainActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         firebaseAuth = FirebaseAuth.getInstance()
         setContentView(binding.root)
         replaceFragmentView(medicamentosFragment()) //aca seteo un fragment por default
 
-        binding.textView7.text="Usuario activo: "+ (firebaseAuth.currentUser?.email ?: "")
-        binding.bottonNavigationMenu.setOnItemSelectedListener{
-            when(it.itemId){
+
+        binding.textView7.text = "Usuario activo: " + (firebaseAuth.currentUser?.email ?: "")
+        binding.bottonNavigationMenu.setOnItemSelectedListener {
+            when (it.itemId) {
                 R.id.medicamentosMenuItem -> replaceFragmentView(medicamentosFragment())
                 R.id.historialMenuItem -> replaceFragmentView(historialFragment())
                 R.id.logoutMenuItem -> logOut()
 
-                else ->{}
+                else -> {}
             }
             true
         }
     }
 
-    private fun replaceFragmentView(fragment: Fragment){
-        val fragmentManager=supportFragmentManager
-        val fragmentTransition=fragmentManager.beginTransaction()
-        fragmentTransition.replace(R.id.homeframeLayout,fragment)
+    private fun replaceFragmentView(fragment: Fragment) {
+        val fragmentManager = supportFragmentManager
+        val fragmentTransition = fragmentManager.beginTransaction()
+        fragmentTransition.replace(R.id.homeframeLayout, fragment)
         fragmentTransition.commit()
     }
 
-    private fun logOut(){
+    private fun logOut() {
         firebaseAuth.signOut()
         val intent = Intent(this, SiginActivity::class.java)
         startActivity(intent)

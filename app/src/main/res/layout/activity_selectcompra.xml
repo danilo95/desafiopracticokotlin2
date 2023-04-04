@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Orden"
+        android:text="@string/orden"
         android:textColor="@color/black"
         android:textSize="26sp"
         android:textStyle="bold" />
@@ -23,21 +23,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Medicamento"
+            android:text="@string/medicamentoTable"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Precio"
+            android:text="@string/precioTable"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cantidad"
+            android:text="@string/cantidadTable"
             android:textStyle="bold" />
 
     </TableRow>
@@ -116,7 +116,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pago Rapido"
+            android:text="@string/pago_rapido"
             android:textColor="@color/black"
             android:textSize="26sp"
             android:textStyle="bold" />
@@ -132,7 +132,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Card Number" />
+                android:text="@string/card_number" />
 
             <EditText
                 android:id="@+id/cardNumber"
@@ -162,7 +162,7 @@
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Expiration Date" />
+                    android:text="@string/expiration_date" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -227,7 +227,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Direccion de entrega" />
+                android:text="@string/direccion_de_entrega" />
 
             <EditText
                 android:id="@+id/cardDirrecion"
@@ -247,7 +247,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:background="@color/yellow"
-        android:text="Pagar"
+        android:text="@string/pagar"
         android:textColor="@color/black"
         android:textStyle="bold" />
     <TextView

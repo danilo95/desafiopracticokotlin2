@@ -1,5 +1,38 @@
 <resources>
     <string name="app_name">desafiopractico2</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="type_your_email">Type your Email</string>
+    <string name="type_your_password">Type Your Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="no_estas_registrado_sign_up">dont have a account?, Sign up!</string>
+
+    <string name="type_your_email2">Type your Email</string>
+    <string name="type_your_password2">Type Your Password</string>
+    <string name="retype_your_password">Retype Your Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="ya_posees_cuenta_sign_in">already have an account? , Sign In !</string>
+    <string name="medicamentos">Medicines</string>
+    <string name="historial">Record</string>
+    <string name="log_out">Log out</string>
+    <string name="nombre">Name:</string>
+    <string name="precio">Price:</string>
+    <string name="indicaciones">Indications:</string>
+    <string name="contra_indicaciones">contraindications:</string>
+    <string name="seleccionar">Select</string>
+    <string name="nombre2">Name:</string>
+    <string name="precio2">Price:</string>
+    <string name="precio_unitario">Unit price:</string>
+    <string name="cantidad">Amount:</string>
+    <string name="direccion_envio">Shipping Address:</string>
+    <string name="orden">purchase order</string>
+    <string name="medicamentoTable">Medicine</string>
+    <string name="precioTable">Price</string>
+    <string name="cantidadTable">Amount</string>
+    <string name="pago_rapido">Quick payment</string>
+    <string name="card_number">Card Number</string>
+    <string name="expiration_date">Expiration Date</string>
+    <string name="direccion_de_entrega">shipping address</string>
+    <string name="pagar">Pay</string>
+    <string name="compra_exitosa">Successful purchase</string>
+    <string name="regresar_a_pantalla_principal">Go back Home</string>
 </resources>
