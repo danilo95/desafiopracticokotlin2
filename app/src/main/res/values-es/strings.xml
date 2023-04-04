@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">desafiopractico2</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="type_your_email">Escribe tu email</string>
+    <string name="type_your_password">Escribe tu contraseña</string>
+    <string name="sign_in">Ingresar</string>
+    <string name="no_estas_registrado_sign_up">No estas registrado?, Registrate!</string>
+    <string name="type_your_email2">Ingresa tu Email</string>
+    <string name="type_your_password2">Ingresa tu contraseña</string>
+    <string name="retype_your_password">Ingresa nuevamente tu contraseña</string>
+    <string name="sign_up">Registrate</string>
+    <string name="ya_posees_cuenta_sign_in">Ya posees cuenta? , Ingresa !</string>
+    <string name="medicamentos">Medicamentos</string>
+    <string name="historial">Historial</string>
+    <string name="log_out">Salir</string>
+    <string name="nombre">Nombre:</string>
+    <string name="precio">Precio:</string>
+    <string name="indicaciones">Indicaciones:</string>
+    <string name="contra_indicaciones">Contra Indicaciones:</string>
+    <string name="seleccionar">Seleccionar</string>
+    <string name="nombre2">Nombre:</string>
+    <string name="precio2">Precio:</string>
+    <string name="precio_unitario">Precio unitario:</string>
+    <string name="cantidad">cantidad:</string>
+    <string name="direccion_envio">direccion envio:</string>
+    <string name="orden">Orden</string>
+    <string name="medicamentoTable">Medicamento</string>
+    <string name="cantidadTable">Cantidad</string>
+    <string name="pago_rapido">Pago Rapido</string>
+    <string name="card_number">Numero de tarjeta</string>
+    <string name="expiration_date">Fecha de expiracion</string>
+    <string name="direccion_de_entrega">Direccion de entrega</string>
+    <string name="pagar">Pagar</string>
+    <string name="compra_exitosa">Compra Exitosa</string>
+    <string name="regresar_a_pantalla_principal">Regresar a pantalla principal</string>
+</resources>
