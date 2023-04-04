@@ -1,5 +1,6 @@
 package com.example.desafiopractico2
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -19,6 +20,7 @@ lateinit var ordenMedicamentoCantidad: EditText
 lateinit var ordenMedicamentoTotalIva: TextView
 lateinit var ordenMedicamentoTotal: TextView
 lateinit var cardDirrecion: TextView
+lateinit var textoUsuario: TextView
 
 lateinit var cardNumber: EditText
 lateinit var cardMes: EditText
@@ -30,8 +32,9 @@ var precioTotal = 0
 
 
 class selectCompra : AppCompatActivity() {
+    var firebaseAuth = FirebaseAuth.getInstance()
 
-
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_selectcompra)
@@ -43,6 +46,7 @@ class selectCompra : AppCompatActivity() {
         ordenMedicamentoCantidad = findViewById(R.id.ordenMedicamentoCantidad)
         ordenMedicamentoTotalIva = findViewById(R.id.ordenMedicamentoTotalIva)
         ordenMedicamentoTotal = findViewById(R.id.ordenMedicamentoTotal)
+        textoUsuario=findViewById(R.id.textView7)
         cardDirrecion = findViewById(R.id.cardDirrecion)
         cardNumber = findViewById(R.id.cardNumber)
         cardMes = findViewById(R.id.cardMes)
@@ -58,6 +62,7 @@ class selectCompra : AppCompatActivity() {
         ordenMedicamentoName.setText(medicamentNameIntent)
         ordenMedicamentoPrecio.setText("$ " + (medicamentPriceIntent + ".00"))
         ordenMedicamentoCantidad.setText("1")
+        textoUsuario.setText("Compra para el usuario: "+ (firebaseAuth.currentUser?.email ?:"" ))
 
         var precio = medicamentPriceIntent?.toInt() ?: 1
         var cantidadPrecio = (medicamentPriceIntent?.toInt() ?: 1) * 1

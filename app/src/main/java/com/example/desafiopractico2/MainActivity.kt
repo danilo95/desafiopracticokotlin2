@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         replaceFragmentView(medicamentosFragment()) //aca seteo un fragment por default
 
+        binding.textView7.text="Usuario activo: "+ (firebaseAuth.currentUser?.email ?: "")
         binding.bottonNavigationMenu.setOnItemSelectedListener{
             when(it.itemId){
                 R.id.medicamentosMenuItem -> replaceFragmentView(medicamentosFragment())
