@@ -42,29 +42,10 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.myViewHolder>() {
 
         test.setOnClickListener { v: View ->
 
-            Toast.makeText(holder.itemView.context, "soy yo ${currentItem}", Toast.LENGTH_SHORT)
-                .show()
-
-
             val intent: Intent = Intent(v.context, selectCompra::class.java)
-
+            intent.putExtra("medicamentoName",currentItem.nombre);
+            intent.putExtra("medicamentoPrice",currentItem.precio.toString());
             v.context.startActivity(intent)
-
-
-        }
-        val compra: Button = holder.itemView.findViewById((R.id.buttoncompra))
-
-        test.setOnClickListener { v: View ->
-
-            Toast.makeText(holder.itemView.context, "soy yo ${currentItem}", Toast.LENGTH_SHORT)
-                .show()
-
-
-            val intent: Intent = Intent(v.context, compra::class.java)
-
-            v.context.startActivity(intent)
-
-
         }
 
 
